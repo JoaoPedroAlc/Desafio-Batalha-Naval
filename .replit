@@ -66,3 +66,19 @@ pattern = "**/*.{c,h}"
 
 [languages.c.languageServer]
 start = "ccls"
+
+[workflows]
+runButton = "Batalha Naval"
+
+[[workflows.workflow]]
+name = "Batalha Naval"
+author = 25322743
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "make -s"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./main"
